@@ -49,7 +49,7 @@
 		
 		#Busca a pagina e verifica se existe
 		function BuscaPagina(){
-			$Sql = "Select * from c_paginas where nome = '".$this->Pagina."'";
+			$Sql = "Select * from g_paginas where nome = '".$this->Pagina."'";
 			$result = $this->Execute($Sql);
 			$num_rows = $this->Linha($result);
 			if($num_rows){

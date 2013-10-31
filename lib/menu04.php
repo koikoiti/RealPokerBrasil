@@ -6,5 +6,5 @@
 	$banco = new bancoinicio();
 
 	#Imprimi valores
-	$Conteudo = $banco->CarregaHtml('menu05');
+	$Conteudo = $banco->CarregaHtml('menu04');
 ?>
