@@ -1,0 +1,47 @@
+body{margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#fff; background:url(../images/bg.jpg) no-repeat center 0;}
+
+/*** COMMON CSS ***/
+#main{margin:0 auto; width:980px;}
+img{border:0;}
+ul, h1, h2, h3, h4, h5{margin:0; padding:0; line-height:normal; width:100%;}
+ul li{list-style:none; float:left;}
+
+.details_holder{ width:980px; float:left; padding:30px 0;}
+
+/*** HEADER ****/
+.header{ width:980px; float:left;}
+.logo{ width:100%; float:left;}
+.navigation{ width:980px; float:left; font-size:24px; text-transform:none;margin-top:5px;}
+.navigation ul li{width:150px; margin:0 16px 0 0; float:left;}
+.navigation ul li.nosapce{margin:0;}
+.navigation ul li a{display:block; float:left; width:150px; height:35px; padding:5px 0 0 0; background:url(../images/nav.png) no-repeat 0 0; text-align:center; color:#fff; text-decoration:none;}
+.navigation ul li a:hover{background:url(../images/nav-ov.png) no-repeat 0 0; text-shadow:0 0 20px #ff0018;}
+
+.main_content{ width:728px; float:left; padding:0 27px 0 0;}
+.slider{width:100%; float:left;}
+
+.sidebar{ width:225px; float:left;}
+.latestnews{width:195px; height:518px; padding:18px 15px 0 15px; float:left; background:url(../images/latestnews.png) no-repeat 0 0;}
+
+.our_game{width:100%; float:left; padding:30px 0 0 0;}
+.our_game ul li{width:225px; float:left; margin:0 26px 0 0;}
+.our_game ul li.nosapce{margin:0;}
+
+/*** FOOTER ****/
+.footer_holder{width:100%; float:left; background:#000; padding:20px 0;}
+.footer{ width:980px; margin:0 auto;}
+.footer_image{width:100%; float:left; text-align:center; padding:0 0 40px 0;}
+.footer_image img{margin:0 150px;}
+.footer_link{width:100%; float:left; padding:15px 0 0 0; background:url(../images/footer-ico.jpg) no-repeat 40px 0; text-align:center; color:#666666; font-size:11px;}
+
+/*** Feito por nois ****/
+.conteudo{
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background: rgba(200, 54, 54, 0.2);
+	padding: 20px;
+	text-align: justify;
+	font-size: 14px;
+	color: #F2EAEA;
+}

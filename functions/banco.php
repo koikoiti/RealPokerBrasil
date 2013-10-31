@@ -93,7 +93,7 @@
 		
 		#Funcao que carrega as páginas
 		function CarregaPaginas(){
-			$urlDesenvolve = 'sistema_base';
+			$urlDesenvolve = 'RealPokerBrasil';
 			$primeiraBol = true;
 			$uri = $_SERVER["REQUEST_URI"];
 			$exUrls = explode('/',$uri);
