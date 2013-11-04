@@ -10,7 +10,8 @@ ul li{list-style:none; float:left;}
 
 /*** HEADER ****/
 .header{ width:980px; float:left;}
-.logo{ width:100%; float:left; margin-top: 10px;}
+.logo{ width:50%; float:left; margin-top:10px;}
+.logo-right{ width:50%; float:left;margin-top:10px;height:219px;}
 .navigation{ width:980px; float:left; font-size:24px; text-transform:none;margin-top:5px;}
 .navigation ul li{width:150px; margin:0 16px 0 0; float:left;}
 .navigation ul li.nosapce{margin:0;}
