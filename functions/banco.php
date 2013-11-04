@@ -13,6 +13,22 @@
 			}
 		}	
 		
+		#Busca os usuarios do site jogobrasil.net
+		function BuscaUsuariosSite(){
+			$raw = file_get_contents("http://jogobrasil.net/www/");
+			$newlines = array("\t","\n","\r","\x20\x20","\0","\x0B");
+			#Retira os caracteres de identação html
+			$content = str_replace($newlines, "", html_entity_decode($raw));
+			#Seta onde irá começar
+			$start = strpos($content,'Online');
+			#Define final
+			$end = strpos($content,'id="wrap_content">',$start) + 18;
+			$table = substr($content,$start,$end-$start);
+			$aux = explode(">", $table);
+			$usuarios = rtrim($aux[1], " </span");
+			return $usuarios;
+		}
+		
 		#funcao imprime conteudo
 		function Imprime($Conteudo){
 			$SaidaHtml = $this->CarregaHtml('modelo');
