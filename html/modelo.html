@@ -8,6 +8,8 @@
 	<!-- Carrega css -->
 	<link href="<%URLPADRAO%>html/css/style.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="<%URLPADRAO%>html/slider/engine1/style.css" />
+	<!-- Carrega API Skype -->
+	<script type="text/javascript" src="http://cdn.dev.skype.com/uri/skype-uri.js"></script>
 </head>
 <body>
 	<div id="main">
@@ -36,7 +38,24 @@
 	</div>
 	<div class="footer_holder">
 		<div class="footer">
-    		<div class="footer_image"><a href="#"><img src="<%URLPADRAO%>html/images/paypal.png" alt="" /></a> <a href="#"><img src="<%URLPADRAO%>html/images/online.png" alt="" /></a></div>
+    		<div class="footer_image">
+	    		<div style="float: left; background: red; width: 490px;">
+	    			<a href="#">
+	    				<img src="<%URLPADRAO%>html/images/paypal.png" alt="" />
+	    			</a>
+	    		</div>
+	    			<div id="call_32" style="float:left;background: #0094ff;margin-left: 120px;">
+					   <script type="text/javascript">
+					        Skype.ui({
+					            name: "chat",
+					            element: "call_32",
+					            participants: ["israelcbj"],
+					            imageSize: 32,
+					            imageColor: "white"
+					        });
+					    </script>
+					</div>
+    		</div>
         	<div class="footer_link"><a href="http://validate.cyberluck.com/validate/4c56b60d-34f0-4663-95a8-67780a00002a"><img src="<%URLPADRAO%>html/images/footer-ico.jpg"></a> Jogobrasil operates under the License No. 1668/JAZ issued to Curacao eGaming (Cyberluck Curacao N.V.) Authorized and Regulated by the Government of Curacao. <br /><br /><br /><img src="<%URLPADRAO%>html/images/footer-img.png" alt="" /></div>
     	</div>
     </div>
