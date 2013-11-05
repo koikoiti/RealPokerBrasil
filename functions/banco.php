@@ -39,7 +39,7 @@
 			$SaidaHtml = str_replace('<%USUARIOS%>',$usuarios,$SaidaHtml);
 			$SaidaHtml = str_replace('<%CONTEUDO%>',$Conteudo,$SaidaHtml);
 			$SaidaHtml = str_replace('<%URLPADRAO%>',UrlPadrao,$SaidaHtml);
-			echo $SaidaHtml;
+			echo utf8_encode($SaidaHtml);
 		}
 		
 		#funcao que chama manutencao
