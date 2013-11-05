@@ -32,6 +32,11 @@
 		#funcao imprime conteudo
 		function Imprime($Conteudo){
 			$SaidaHtml = $this->CarregaHtml('modelo');
+			
+			#Busca os usuarios online do jogobrasil.net
+			$usuarios = $this->BuscaUsuariosSite();
+			
+			$SaidaHtml = str_replace('<%USUARIOS%>',$usuarios,$SaidaHtml);
 			$SaidaHtml = str_replace('<%CONTEUDO%>',$Conteudo,$SaidaHtml);
 			$SaidaHtml = str_replace('<%URLPADRAO%>',UrlPadrao,$SaidaHtml);
 			echo $SaidaHtml;

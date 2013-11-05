@@ -28,11 +28,9 @@ ul li{list-style:none; float:left;}
 			-webkit-border-radius: 10px;
 			-moz-border-radius: 10px;
 			border-radius: 10px;
-			width:195px; 
-			height:499px; 
-			padding:18px 15px 0 15px; 
+			width:223px; 
+			height:499px;  
 			float:left; 
-			border:2px solid red;
 			}
 
 .our_game{width:100%; float:left; padding:30px 0 0 0;}
@@ -57,4 +55,18 @@ ul li{list-style:none; float:left;}
 	text-align: justify;
 	font-size: 14px;
 	color: #F2EAEA;
+}
+
+.torneios{
+	height: 146px;
+	widht:100%;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background: rgba(200, 54, 54, 0.2);
+	padding: 5px;
+	text-align: left;
+	font-size: 14px;
+	color: #F2EAEA;
+	margin-bottom:10px;
 }
