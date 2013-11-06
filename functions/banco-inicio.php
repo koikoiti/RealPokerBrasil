@@ -51,7 +51,7 @@
 		}#Fim function BuscaTorneios
 		
 		function ListaTorneios(){
-			$max = 20;
+			$max = 25;
 			$Auxilio = parent::CarregaHtml('torneios-inicio');
 			$Sql = "SELECT * FROM g_torneios WHERE data >= CURDATE() - 1
 					AND status <> 'Completed'
@@ -61,11 +61,12 @@
 			$result = parent::Execute($Sql);
 			$num_rows = parent::Linha($result);
 			if($num_rows){
+				
 				while($rs = mysql_fetch_array($result, MYSQL_ASSOC)){
 					$Linha = $Auxilio;
 					$tamanho = strlen($rs['nome']);
 					if($tamanho > $max){
-						$nome = substr_replace($rs['nome'],'(...)',$max,$tamanho-$max);
+						$nome = substr_replace($rs['nome'],'(...)',$max-5,$tamanho-20);
 					}else{
 						$nome = $rs['nome'];
 					}
@@ -73,7 +74,7 @@
 					$Linha = str_replace("<%ID%>", $rs['idtorneio'], $Linha);
 					$Linha = str_replace("<%INSCRITOS%>", $rs['inscritos'], $Linha);
 					$Linha = str_replace("<%PREMIACAO%>", $rs['premiacao'], $Linha);
-					$Linha = str_replace("<%DATA%>", date('d/m/Y',strtotime($rs['data'])).' - '.rtrim($rs['hora'],':00'), $Linha);
+					$Linha = str_replace("<%DATA%>", date('d/m/Y',strtotime($rs['data'])).' - '.substr($rs['hora'],'0',-3), $Linha);
 					
 					#Traduz para PT-BR
 					switch ($rs['status']){
@@ -81,7 +82,7 @@
 							$status = 'Registrando';
 							break;
 							case 'Running':
-							$status = 'Running';
+							$status = 'Rolando';
 							break;
 							case 'Completed':
 							$status = 'Concluído';
