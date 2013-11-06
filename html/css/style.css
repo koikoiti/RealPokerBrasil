@@ -58,7 +58,7 @@ ul li{list-style:none; float:left;}
 }
 
 .torneios{
-	height: 146px;
+	height: 142px;
 	widht:100%;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -69,4 +69,33 @@ ul li{list-style:none; float:left;}
 	font-size: 14px;
 	color: #F2EAEA;
 	margin-bottom:10px;
+}
+
+.torneios a{
+	color: #F2EAEA;
+	text-decoration: none;
+	}
+	
+.torneios a:HOVER {
+	text-decoration: underline;
+}
+
+.ver_torneio{
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	font-size:18px;
+	display:block; 
+	width:100px; 
+	height:25px; 
+	padding:5px 0 0 0; 
+	background:url(../images/nav.png) no-repeat 0 0; 
+	text-align:center;
+	color:#fff; 
+	text-decoration:none;
+}
+.ver_torneio:hover{
+	background:url(../images/nav-ov.png) no-repeat 0 0;
+	text-shadow:0 0 20px #ff0018;
+	cursor:pointer;
 }
