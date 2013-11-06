@@ -97,5 +97,52 @@
 			}
 			return $Torneios;
 		}
+		
+	function ListaTorneiosCompleta(){
+			$max = 60;
+			$Auxilio = parent::CarregaHtml('torneios-itens');
+			$Sql = "SELECT * FROM g_torneios WHERE data >= CURDATE() - 1
+					ORDER BY data DESC, hora DESC
+					";
+			$result = parent::Execute($Sql);
+			$num_rows = parent::Linha($result);
+			if($num_rows){
+				
+				while($rs = mysql_fetch_array($result, MYSQL_ASSOC)){
+					$Linha = $Auxilio;
+					$tamanho = strlen($rs['nome']);
+					if($tamanho > $max){
+						$nome = substr_replace($rs['nome'],'(...)',$max-5,$tamanho-55);
+					}else{
+						$nome = $rs['nome'];
+					}
+					$Linha = str_replace("<%NOME%>", ucfirst(strtolower($nome)), $Linha);
+					$Linha = str_replace("<%ID%>", $rs['idtorneio'], $Linha);
+					$Linha = str_replace("<%INSCRITOS%>", $rs['inscritos'], $Linha);
+					$Linha = str_replace("<%PREMIACAO%>", $rs['premiacao'], $Linha);
+					$Linha = str_replace("<%STATUS%>", $rs['status'], $Linha);
+					$Linha = str_replace("<%DATA%>", date('d/m/Y',strtotime($rs['data'])).' - '.substr($rs['hora'],'0',-3), $Linha);
+					
+					#Traduz para PT-BR
+					switch ($rs['status']){
+							case 'Registering':
+							$status = 'Registrando';
+							break;
+							case 'Running':
+							$status = 'Rolando';
+							break;
+							case 'Completed':
+							$status = 'Concluído';
+							break;
+							case 'Announced':
+							$status = 'Anunciado';
+							break;
+					}
+					$Linha = str_replace("<%STATUS%>", $status, $Linha);
+					$Torneios .= $Linha;
+				}
+			}
+			return $Torneios;
+		}
 	}#Fim da classe
 ?>

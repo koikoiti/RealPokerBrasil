@@ -1,4 +1,14 @@
-body{margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#fff; background:url(../images/bg.jpg) no-repeat center 0;}
+body{margin:0;
+padding:0;
+font-family:Arial, Helvetica, sans-serif;
+font-size:13px;
+color:#fff;
+background:url(../images/bg.jpg) no-repeat center center fixed;
+-webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ }
 
 /*** COMMON CSS ***/
 #main{margin:0 auto; width:980px;}
@@ -104,4 +114,8 @@ ul li{list-style:none; float:left;}
 	margin-top:10px;
 	padding-top:109px;
 	font-size: 30px;
+}
+#tabela_torneios{
+	width:100%;
+	text-align: center;
 }
