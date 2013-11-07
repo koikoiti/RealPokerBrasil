@@ -138,6 +138,9 @@ ul li{list-style:none; float:left;}
 	width: 150px;
 	height: 150px;
 	background: #0094ff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 }
 .footer_img_texto{
 	overflow:hidden;
