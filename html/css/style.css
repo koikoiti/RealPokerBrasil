@@ -123,10 +123,18 @@ ul li{list-style:none; float:left;}
 	float: left; 
 	width: 490px;
 }
+.footer_left a{
+	color: #ffffff;
+	text-decoration: none;
+}
 .footer_right{
 	width: 490px;
 	float:right;
 	
+}
+.footer_right a{
+	color: #ffffff;
+	text-decoration: none;
 }
 
 #call_32{
