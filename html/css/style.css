@@ -144,6 +144,10 @@ ul li{list-style:none; float:left;}
 	
 	
 }
+.footer_img_texto a{
+	color: #666256;
+	text-decoration: none;
+}
 .footer_img_texto_right{
 	height:40px;
 
