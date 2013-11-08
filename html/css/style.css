@@ -183,7 +183,7 @@ ul li{list-style:none; float:left;}
 .form-control{
     display: block;
     width: 350px;
-    height: 20px;
+    height: 25px;
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.42857;

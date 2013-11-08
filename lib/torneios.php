@@ -7,7 +7,7 @@
 	
 	#busca torneios
 	$torneios = $banco->ListaTorneiosCompleta();
-	
+    
 	#Imprimi valores
 	$Conteudo = $banco->CarregaHtml('torneios');
 	$Conteudo = str_replace('<%TORNEIOS%>',$torneios,$Conteudo);
