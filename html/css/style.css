@@ -244,7 +244,7 @@ ul li{list-style:none; float:left;}
 }
 /* Linhas dos Torneios */
 .linha1{
-    background-color: #F05656;
+    background: rgba(208, 208, 208, 0.2);
     padding: 2px;
 }
 
