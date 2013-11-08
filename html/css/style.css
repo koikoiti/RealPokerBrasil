@@ -118,6 +118,7 @@ ul li{list-style:none; float:left;}
 #tabela_torneios{
 	width:100%;
 	text-align: center;
+    border-collapse: collapse;
 }
 .footer_left{
 	float: left; 
@@ -227,4 +228,14 @@ ul li{list-style:none; float:left;}
     border: 1px solid transparent;
     border-radius: 4px 4px 4px 4px;
     -moz-user-select: none;
+}
+
+/* Linhas dos Torneios */
+.linha1{
+    background-color: #F05656;
+    padding: 2px;
+}
+
+.linha2{
+    padding: 2px;
 }

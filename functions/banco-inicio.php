@@ -100,6 +100,7 @@
 		
 	function ListaTorneiosCompleta(){
 			$max = 60;
+            $count = 0;
 			$Auxilio = parent::CarregaHtml('torneios-itens');
 			$Sql = "SELECT * FROM g_torneios WHERE data >= CURDATE() - 1
 					ORDER BY data DESC, hora DESC
@@ -107,7 +108,6 @@
 			$result = parent::Execute($Sql);
 			$num_rows = parent::Linha($result);
 			if($num_rows){
-				
 				while($rs = mysql_fetch_array($result, MYSQL_ASSOC)){
 					$Linha = $Auxilio;
 					$tamanho = strlen($rs['nome']);
@@ -116,8 +116,14 @@
 					}else{
 						$nome = $rs['nome'];
 					}
+                    if($count % 2 == 0){
+                        $classe = "linha1";
+                    }else{
+                        $classe = "linha2";
+                    }
 					$Linha = str_replace("<%NOME%>", ucfirst(strtolower($nome)), $Linha);
 					$Linha = str_replace("<%ID%>", $rs['idtorneio'], $Linha);
+                    $Linha = str_replace("<%CLASSE%>", $classe, $Linha);
 					$Linha = str_replace("<%INSCRITOS%>", $rs['inscritos'], $Linha);
 					$Linha = str_replace("<%PREMIACAO%>", $rs['premiacao'], $Linha);
 					$Linha = str_replace("<%STATUS%>", $rs['status'], $Linha);
@@ -140,6 +146,7 @@
 					}
 					$Linha = str_replace("<%STATUS%>", $status, $Linha);
 					$Torneios .= $Linha;
+                    $count++;
 				}
 			}
 			return $Torneios;
