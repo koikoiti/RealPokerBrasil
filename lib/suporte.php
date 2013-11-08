@@ -5,6 +5,9 @@
 	#Instancia o objeto
 	$banco = new bancoinicio();
     
+    #declara variavel
+    $msg = '';
+    
     #trabalha com post
     if(isset($_POST['acao']) && $_POST['acao'] != ''){
        $nome = strip_tags(trim(addslashes($_POST["nome"])));
@@ -13,7 +16,7 @@
        
        $valida = $banco->ValidaTudo($_POST);
        if($valida){
-            $msg = 'campo em branco';
+            $msg = "<tr><td colspan='2'><div class='alert alert-info'><center><strong>Erro! </strong>Preencha todos os campos.</center></div></td></tr>";
        }else{
             echo "<script>alert('Mensagem Enviada com Sucesso! Aguarde Nosso Retorno.');</script>";
        }
@@ -21,4 +24,5 @@
     
 	#Imprimi valores
 	$Conteudo = $banco->CarregaHtml('suporte');
+    $Conteudo = str_replace('<%MSG%>',$msg,$Conteudo);
 ?>
