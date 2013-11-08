@@ -13,6 +13,16 @@
 			}
 		}	
 		
+        #Valida Campos da TEla de Suporte
+        function ValidaTudo($arr){
+            foreach($arr as $key => $value){
+                if($value == ''){
+                    $retorno[] = $key;
+                }
+            }
+            return $retorno;
+        }
+        
 		#Busca os usuarios do site jogobrasil.net
 		function BuscaUsuariosSite(){
 			$raw = file_get_contents("http://jogobrasil.net/www/");
