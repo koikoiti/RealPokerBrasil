@@ -6,7 +6,7 @@
 	$banco = new bancoinicio();
 		
 	#Busca os torneios do dia
-	$banco->BuscaTorneios();
+	#$banco->BuscaTorneios();
 	
 	$torneios = $banco->ListaTorneios();
 	
