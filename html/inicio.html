@@ -1,8 +1,38 @@
 <div class="main_content">
 	<div class="slider">
-	
+        <script src="<%URLPADRAO%>html/js/easySlider1.7.js"></script>
+        <script type="text/javascript">
+		$(document).ready(function(){	
+			$("#eslaider").easySlider({
+				auto: true, 
+				continuous: true,
+                speed: 1000,
+                prevText: "<< |",
+                nextText: ">>"
+			});
+		});	
+	</script>
+	   <div id="eslaider" style="overflow: hidden; height: 518px; width: 728px;">
+            <ul>
+                <li>
+                    <a href="<%URLPADRAO%>jogue-agora">
+                        <img src="<%URLPADRAO%>html/images/slider1.jpg"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="<%URLPADRAO%>poker-live">
+                        <img src="<%URLPADRAO%>html/images/slider2.jpg"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="<%URLPADRAO%>torneios">
+                        <img src="<%URLPADRAO%>html/images/slider3.jpg"/>
+                    </a>
+                </li>
+            </ul>
+       </div>
 	<!-- Start WOWSlider.com BODY section -->
-	<div id="wowslider-container1">
+	<!--div id="wowslider-container1">
 		<div class="ws_images"><ul>
 		<li><a href="<%URLPADRAO%>jogue-agora"><img src="<%URLPADRAO%>html/slider/data1/images/slider1.jpg" alt="slider01" title="" id="wows1_0"/></a></li>
 		<li><a href="<%URLPADRAO%>poker-live"><img src="<%URLPADRAO%>html/slider/data1/images/slider2.jpg" alt="slider02" title="" id="wows1_1"/></a></li>
@@ -15,10 +45,10 @@
 		</div></div>
 		<span class="wsl"><a href="http://wowslider.com">Slider for Website</a> by WOWSlider.com v4.7</span>
 		<div class="ws_shadow"></div>
-		</div>
-		<script type="text/javascript" src="<%URLPADRAO%>html/slider/engine1/wowslider.js"></script>
-		<script type="text/javascript" src="<%URLPADRAO%>html/slider/engine1/script.js"></script>
-		<!-- End WOWSlider.com BODY section -->
+	</div>
+	<script type="text/javascript" src="<%URLPADRAO%>html/slider/engine1/wowslider.js"></script>
+	<script type="text/javascript" src="<%URLPADRAO%>html/slider/engine1/script.js"></script>
+	<!-- End WOWSlider.com BODY section -->
 
 	</div>
 </div>
