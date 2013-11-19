@@ -1,7 +1,7 @@
 <?php
 	class bancoinicio extends banco{
 		
-		#Busca os torneios
+		#NAO ESTA USANDO ! ESTA SENDO USADA NO CRON DO HOSTINGER
 		function BuscaTorneios(){
 			#faz a busca no site
 			$dia = date("d");
@@ -51,13 +51,17 @@
 		}#Fim function BuscaTorneios
 		
 		function ListaTorneios(){
+            $horaAgora = date('H:i:s');
+            $dataAgora = date('Y-m-d');
 			$max = 25;
 			$Auxilio = parent::CarregaHtml('torneios-inicio');
-			$Sql = "SELECT * FROM g_torneios WHERE data >= CURDATE() - 1
+			$Sql = "SELECT * FROM g_torneios WHERE data >= '$dataAgora'
 					AND status <> 'Completed'
 					AND inscritos <> '0'
+                    AND time_to_sec(hora) > time_to_sec('$horaAgora')
 					ORDER BY inscritos ASC, premiacao DESC
 					LIMIT 0, 3";
+                    echo $Sql;
 			$result = parent::Execute($Sql);
 			$num_rows = parent::Linha($result);
 			if($num_rows){
