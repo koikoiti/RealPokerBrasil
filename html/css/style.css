@@ -253,3 +253,24 @@ ul li{list-style:none; float:left;}
 .linha2{
     padding: 2px;
 }
+
+.btn_jogue_agora{
+    cursor: pointer;
+    font-weight: bolder;
+    display: table-cell;
+    vertical-align: middle;
+    height: 70px;
+    width: 320px;
+    background-color:#F2EAEA;
+    color: #2D0000;
+    font-size: 25px;
+    text-align: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.btn_jogue_agora:hover{
+    background-color:#2D0000;
+    color: #F2EAEA;
+}
