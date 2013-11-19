@@ -97,6 +97,13 @@
 					$Linha = str_replace("<%STATUS%>", $status, $Linha);
 					$Torneios .= $Linha;
 				}
+			}else{
+			     $Torneios = '
+                 <div class="torneios">
+                    <center style="padding-top: 60px;">Nenhum Registro Encontrado.</center>
+                 </div>
+                 
+                 ';
 			}
 			return $Torneios;
 		}
