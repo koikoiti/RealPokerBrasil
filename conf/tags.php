@@ -4,8 +4,8 @@
 	define('UrlPadrao' , "http://".$_SERVER['HTTP_HOST']."/RealPokerBrasil/");
 	
 	#Definições do Banco de Dados
-	define('DB_Host' , "db4free.net");
+	define('DB_Host' , "mysql1328.netcetera.co.uk");
 	define('DB_Database' , "realpokerbrasil");
-	define('DB_User' , "realpokerbrasil");
+	define('DB_User' , "rpb");
 	define('DB_Pass' , "s1stem@");
 ?>
