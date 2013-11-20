@@ -54,13 +54,15 @@
             $horaAgora = date('H:i:s');
             $dataAgora = date('Y-m-d');
 			$max = 25;
+            #AND time_to_sec(hora) > time_to_sec('$horaAgora')
 			$Auxilio = parent::CarregaHtml('torneios-inicio');
 			$Sql = "SELECT * FROM g_torneios WHERE data >= '$dataAgora'
 					AND status <> 'Completed'
-					AND inscritos <> '0'
-                    AND time_to_sec(hora) > time_to_sec('$horaAgora')
+					AND inscritos >= '0'
+                    AND hora > '$horaAgora'
 					ORDER BY inscritos ASC, premiacao DESC
 					LIMIT 0, 3";
+            echo $Sql;
 			$result = parent::Execute($Sql);
 			$num_rows = parent::Linha($result);
 			if($num_rows){
@@ -111,9 +113,10 @@
 	function ListaTorneiosCompleta(){
 			$max = 60;
             $count = 0;
+            $data = date("Y-m-d");
 			$Auxilio = parent::CarregaHtml('torneios-itens');
-			$Sql = "SELECT * FROM g_torneios WHERE data >= CURDATE() - 1
-					ORDER BY data DESC, hora DESC
+			$Sql = "SELECT * FROM g_torneios WHERE data >= '$data'
+					ORDER BY hora ASC
 					";
 			$result = parent::Execute($Sql);
 			$num_rows = parent::Linha($result);
