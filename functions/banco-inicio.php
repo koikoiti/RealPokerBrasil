@@ -62,7 +62,6 @@
                     AND hora > '$horaAgora'
 					ORDER BY inscritos ASC, premiacao DESC
 					LIMIT 0, 3";
-            echo $Sql;
 			$result = parent::Execute($Sql);
 			$num_rows = parent::Linha($result);
 			if($num_rows){
