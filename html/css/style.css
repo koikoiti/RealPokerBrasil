@@ -1,7 +1,9 @@
 body{
     margin:0;
     padding:0;
-    font-family:Arial, Helvetica, sans-serif;
+    /*font-family:Arial, Helvetica, sans-serif;*/
+    font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+    /*font-family: "Hoefler Text", "Baskerville velho cara", Garamond, "Times New Roman", serif;*/
     font-size:13px;
     color:#fff;
     background:url(../images/bg.jpg);
