@@ -18,10 +18,21 @@
             foreach($arr as $key => $value){
                 if($value == ''){
                     $retorno[] = $key;
+                     if($this->validaEmail($arr['email']) == false){
+                        $retorno[] = 'email';
+                     }
                 }
             }
             return $retorno;
         }
+        
+        function validaEmail($email) {
+			if (preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $email)){
+				return true;
+			}else{
+				return false;
+			}
+		}
         
 		#Busca os usuarios do site jogobrasil.net
 		function BuscaUsuariosSite(){
