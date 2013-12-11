@@ -133,18 +133,18 @@
                     }else{
                         $classe = "linha2";
                     }
+                                        
 					$Linha = str_replace("<%NOME%>", ucfirst(strtolower($nome)), $Linha);
 					$Linha = str_replace("<%ID%>", $rs['idtorneio'], $Linha);
                     $Linha = str_replace("<%CLASSE%>", $classe, $Linha);
 					$Linha = str_replace("<%INSCRITOS%>", $rs['inscritos'], $Linha);
 					$Linha = str_replace("<%PREMIACAO%>", $rs['premiacao'], $Linha);
-					$Linha = str_replace("<%STATUS%>", $rs['status'], $Linha);
 					$Linha = str_replace("<%DATA%>", date('d/m/Y',strtotime($rs['data'])).' - '.substr($rs['hora'],'0',-3), $Linha);
 					
 					#Traduz para PT-BR
 					switch ($rs['status']){
 							case 'Registering':
-							$status = 'Registrando';
+							$status = '<span style="color: #33CC00">Registrando</span>';
 							break;
 							case 'Running':
 							$status = 'Rolando';

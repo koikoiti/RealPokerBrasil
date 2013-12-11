@@ -256,6 +256,11 @@ ul li{list-style:none; float:left;}
     padding: 2px;
 }
 
+.linha3{
+    background: rgba(0, 208, 0, 0.2);
+    padding: 2px;
+}
+
 .btn_jogue_agora{
     cursor: pointer;
     font-weight: bolder;
