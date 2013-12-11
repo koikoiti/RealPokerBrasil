@@ -18,9 +18,12 @@
             foreach($arr as $key => $value){
                 if($value == ''){
                     $retorno[] = $key;
-                     if($this->validaEmail($arr['email']) == false){
-                        $retorno[] = 'email';
-                     }
+                    }
+                if($key == 'email'){
+                    $result = $this->validaEmail($value);
+                    if ($result === false){
+                        $retorno[] = $key;
+                    }
                 }
             }
             return $retorno;
