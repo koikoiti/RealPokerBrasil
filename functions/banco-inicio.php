@@ -115,7 +115,7 @@
             $data = date("Y-m-d");
 			$Auxilio = parent::CarregaHtml('torneios-itens');
 			$Sql = "SELECT * FROM g_torneios WHERE data >= '$data'
-					ORDER BY hora ASC
+					ORDER BY data ASC, hora ASC
 					";
 			$result = parent::Execute($Sql);
 			$num_rows = parent::Linha($result);
