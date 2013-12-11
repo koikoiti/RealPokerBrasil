@@ -193,7 +193,7 @@
 			$mail->Password = '15052010';
 
 			// Setando o endereço de recebimento
-			$mail->AddAddress('realpokerbrasil@gmail.com','realpokerbrasil@gmail.com');
+			$mail->AddAddress('contato@realbetsite.com','contato@realbetsite.com');
             //var_dump($mail);die;
 			// Enviando o e-mail para o usuário
             if($mail->Send()){
