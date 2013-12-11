@@ -163,5 +163,42 @@
 			}
 			return $Torneios;
 		}
+        
+        function EnviaEmailContato($nome,$email,$mensagem){
+            #Carrega classe MAILER
+			include_once("./app/PHPMailer/class.phpmailer.php");
+			include("./app/PHPMailer/class.smtp.php");
+
+			$mail = new PHPMailer();
+			// Charset para evitar erros de caracteres
+			$mail->Charset = 'UTF-8';
+			// Dados de quem está enviando o email
+			$mail->From =  $email;
+			$mail->FromName = $nome;
+				
+			// Setando o conteudo
+			$mail->IsHTML(true);
+			$mail->Subject = 'Contato gerado atraves do site RealPokerBrasil';
+			$mail->Body = parent::CarregaHtml('EmailEmpresa');
+            $mail->Body = str_replace("<%MENSAGEM%>", $mensagem, $mail->Body);
+            
+            // Validando a autenticação
+			$mail->IsSMTP();
+			$mail->SMTPAuth = true;
+			$mail->Host     = "ssl://smtp.gmail.com";
+			$mail->Port     = 465;
+			$mail->Username = 'realpokerbrasil@gmail.com';
+			$mail->Password = '15052010';
+
+			// Setando o endereço de recebimento
+			$mail->AddAddress('contato@realbetsite.com','contato@realbetsite.com');
+            //var_dump($mail);die;
+			// Enviando o e-mail para o usuário
+            if($mail->Send()){
+                echo "<script>alert('Mensagem Enviada com Sucesso! Aguarde Nosso Retorno.');</script>";
+            }else{
+                echo "<script>alert('Falha ao enviar o email! Tente novamente mais tarde.');</script>";
+            }
+        }
 	}#Fim da classe
 ?>

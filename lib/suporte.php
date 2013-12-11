@@ -16,9 +16,10 @@
        
        $valida = $banco->ValidaTudo($_POST);
        if($valida){
-            $msg = "<tr><td colspan='2'><div class='alert alert-info'><center><strong>Erro! </strong>Preencha todos os campos.</center></div></td></tr>";
+            $msg = "<tr><td colspan='2'><div class='alert alert-info'><center><strong>Erro! </strong>Preencha todos os campos corretamente.</center></div></td></tr>";
        }else{
-            echo "<script>alert('Mensagem Enviada com Sucesso! Aguarde Nosso Retorno.');</script>";
+            #enviar email
+            $banco->EnviaEmailContato($nome,$email,$mensagem);
        }
     }
     
