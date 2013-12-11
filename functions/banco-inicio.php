@@ -180,6 +180,8 @@
 			$mail->IsHTML(true);
 			$mail->Subject = 'Contato gerado atraves do site RealPokerBrasil';
 			$mail->Body = parent::CarregaHtml('EmailEmpresa');
+            $mail->Body = str_replace("<%NOME%>", $nome, $mail->Body);
+            $mail->Body = str_replace("<%EMAIL%>", $email, $mail->Body);
             $mail->Body = str_replace("<%MENSAGEM%>", $mensagem, $mail->Body);
             
             // Validando a autenticação
@@ -191,7 +193,7 @@
 			$mail->Password = '15052010';
 
 			// Setando o endereço de recebimento
-			$mail->AddAddress('contato@realbetsite.com','contato@realbetsite.com');
+			$mail->AddAddress('realpokerbrasil@gmail.com','realpokerbrasil@gmail.com');
             //var_dump($mail);die;
 			// Enviando o e-mail para o usuário
             if($mail->Send()){

@@ -236,7 +236,7 @@ ul li{list-style:none; float:left;}
 
 .alert {
     height:10px;
-    padding: 15px;
+    padding: 10px;
     border: 1px solid transparent;
     border-radius: 4px 4px 4px 4px;
 }
