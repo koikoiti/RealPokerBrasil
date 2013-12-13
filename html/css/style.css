@@ -2,8 +2,9 @@ body{
     margin:0;
     padding:0;
     /*font-family:Arial, Helvetica, sans-serif;*/
-    font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+    /*font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;*/
     /*font-family: "Hoefler Text", "Baskerville velho cara", Garamond, "Times New Roman", serif;*/
+    font-family: 'Balthazar', serif;
     font-size:13px;
     color:#fff;
     background:url(../images/bg.jpg);
@@ -59,6 +60,11 @@ ul li{list-style:none; float:left;}
 .footer_link{width:100%; float:left; padding:15px 0 0 0;  text-align:center; color:#666666; font-size:11px;}
 
 /*** Feito por nois ****/
+.imagem_conteudo{
+    float:left;
+    margin-right: 5px;
+}
+
 .conteudo{
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -66,8 +72,9 @@ ul li{list-style:none; float:left;}
 	background: rgba(200, 54, 54, 0.2);
 	padding: 20px;
 	text-align: justify;
-	font-size: 16px;
+	font-size: 18px;
 	color: #F2EAEA;
+    overflow: hidden;
 }
 
 .torneios{
@@ -79,7 +86,7 @@ ul li{list-style:none; float:left;}
 	background: rgba(200, 54, 54, 0.2);
 	padding: 5px;
 	text-align: left;
-	font-size: 14px;
+	font-size: 18px;
 	color: #F2EAEA;
 	margin-bottom:10px;
 }
@@ -190,7 +197,7 @@ ul li{list-style:none; float:left;}
     width: 350px;
     height: 25px;
     padding: 6px 12px;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.42857;
     color: rgb(85, 85, 85);
     vertical-align: middle;
@@ -206,7 +213,7 @@ ul li{list-style:none; float:left;}
     max-width: 350px;
     min-height: 150px;
     padding: 6px 12px;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.42857;
     color: rgb(85, 85, 85);
     vertical-align: middle;
